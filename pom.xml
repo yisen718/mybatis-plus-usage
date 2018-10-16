@@ -47,6 +47,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -63,6 +64,7 @@
                 </includes>
                 <filtering>false</filtering>
             </resource>
+
             <resource>
                 <directory>src/main/resources</directory>
                 <includes>
@@ -71,7 +73,9 @@
                 <filtering>false</filtering>
             </resource>
         </resources>
+
         <finalName>api</finalName>
+
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
