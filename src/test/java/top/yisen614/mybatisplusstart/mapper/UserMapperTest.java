@@ -9,8 +9,6 @@ import top.yisen614.mybatisplusstart.entity.User;
 
 import java.util.Date;
 
-import static org.junit.Assert.*;
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class UserMapperTest {
@@ -22,7 +20,13 @@ public class UserMapperTest {
 		for (int i = 0; i < 10; i++) {
 			User user = new User();
 			user.setAccount("account" + i);
+			user.setPassword("password" + i);
+			user.setSortTime(new Date());
+			user.setUpdateTime(new Date());
+			user.setCreateTime(new Date());
+			user.setDeleteFlag(1);
 			user.setIsEnabled(1);
+			userMapper.insert(user);
 		}
 	}
 }

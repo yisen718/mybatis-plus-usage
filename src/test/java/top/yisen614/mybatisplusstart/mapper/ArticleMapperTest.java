@@ -9,11 +9,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import top.yisen614.mybatisplusstart.entity.Article;
 
-import java.io.Serializable;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -27,7 +25,6 @@ public class ArticleMapperTest {
 			Article article = new Article();
 			article.setName("article:" + i);
 			article.setPubDate(new Date());
-			article.setPkId(UUID.randomUUID().toString());
 			articleMapper.insert(article);
 		}
 	}

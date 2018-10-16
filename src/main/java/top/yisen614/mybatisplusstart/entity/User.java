@@ -1,18 +1,18 @@
 package top.yisen614.mybatisplusstart.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import java.time.LocalDateTime;
-import java.io.Serializable;
-import java.util.Date;
-
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
+import java.util.Date;
+
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author 16539
@@ -24,22 +24,27 @@ import lombok.experimental.Accessors;
 @TableName("t_user")
 public class User implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    @TableId("pk_id")
-    private String pkId;
+	@TableId("pk_id")
+	private String pkId;
 
-    private String account;
+	private String account;
 
-    private String password;
+	private String password;
 
-    private Integer isEnabled;
+	@TableField("is_enabled")
+	private Integer isEnabled;
 
-    private Integer deleteFlag;
+	@TableField("delete_flag")
+	private Integer deleteFlag;
 
-    private LocalDateTime createTime;
+	@TableField("create_time")
+	private Date createTime;
 
-    private LocalDateTime updateTime;
+	@TableField("update_time")
+	private Date updateTime;
 
-    private LocalDateTime sortTime;
+	@TableField("sort_time")
+	private Date sortTime;
 }
