@@ -1,5 +1,6 @@
 package top.yisen614.mybatisplusstart.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.util.Date;
 import java.io.Serializable;
@@ -23,6 +24,7 @@ public class Article implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @TableId("pk_id")
     private String pkId;
 
     private String name;

@@ -4,3 +4,15 @@ spring:
     url: jdbc:mysql://39.108.9.18:3306/hello?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
     username: root
     password: sen515216
+
+
+mybatis-plus:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:top/yisen614/mybatisplusstart/xml/*.xml
+  type-aliases-package: top.yisen614.mybatisplusstart.entity
+  global-config:
+    db-config:
+      db-type: mysql
+      id-type: uuid
+      logic-delete-value: 1
+      logic-not-delete-value: 0

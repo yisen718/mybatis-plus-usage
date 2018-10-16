@@ -1,5 +1,6 @@
 package top.yisen614.mybatisplusstart.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.time.LocalDateTime;
 import java.io.Serializable;
@@ -25,6 +26,7 @@ public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @TableId("pk_id")
     private String pkId;
 
     private String account;

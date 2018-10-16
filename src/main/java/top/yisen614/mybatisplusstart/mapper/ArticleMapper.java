@@ -4,6 +4,8 @@ import org.springframework.stereotype.Repository;
 import top.yisen614.mybatisplusstart.entity.Article;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
+import java.util.Date;
+
 /**
  * <p>
  *  Mapper 接口
@@ -14,5 +16,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 @Repository
 public interface ArticleMapper extends BaseMapper<Article> {
-
+	int insertArticle(Date date);
 }
