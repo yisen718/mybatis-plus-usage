@@ -93,7 +93,7 @@ public class UserMapperTest {
 	public void selectPage() {
 		IPage<User> users = userMapper.selectPage(new Page<User>(10, 10), new QueryWrapper<User>().eq("password", "password"));
 		List<User> users1 = users.getRecords();
-		System.out.println(users1.get(0).getGender());
+		users1.forEach(System.out::println);
 	}
 
 	@Test
