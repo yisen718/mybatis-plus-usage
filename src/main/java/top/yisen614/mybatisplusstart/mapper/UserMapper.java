@@ -16,5 +16,5 @@ import top.yisen614.mybatisplusstart.entity.User;
 @Mapper
 @Repository
 public interface UserMapper extends BaseMapper<User> {
-    void deleteAll();
+	void deleteAll();
 }

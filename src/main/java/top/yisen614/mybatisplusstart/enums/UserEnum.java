@@ -32,4 +32,10 @@ public enum UserEnum implements IEnum<Integer> {
 	public Integer getValue() {
 		return value;
 	}
+
+
+	@Override
+	public String toString() {
+		return this.desc;
+	}
 }

@@ -92,7 +92,8 @@ public class UserMapperTest {
 	@Test
 	public void selectPage() {
 		IPage<User> users = userMapper.selectPage(new Page<User>(10, 10), new QueryWrapper<User>().eq("password", "password"));
-		System.out.println(users.getSize());
+		List<User> users1 = users.getRecords();
+		System.out.println(users1.get(0).getGender());
 	}
 
 	@Test

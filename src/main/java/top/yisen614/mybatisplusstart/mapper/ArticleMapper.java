@@ -1,14 +1,14 @@
 package top.yisen614.mybatisplusstart.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.springframework.stereotype.Repository;
 import top.yisen614.mybatisplusstart.entity.Article;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 import java.util.Date;
 
 /**
  * <p>
- *  Mapper 接口
+ * Mapper 接口
  * </p>
  *
  * @author 16539
