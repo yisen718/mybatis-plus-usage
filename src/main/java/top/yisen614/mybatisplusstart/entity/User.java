@@ -2,7 +2,9 @@ package top.yisen614.mybatisplusstart.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -22,7 +24,7 @@ import java.util.Date;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("t_user")
-public class User implements Serializable {
+public class User extends Model<User> implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -33,18 +35,22 @@ public class User implements Serializable {
 
 	private String password;
 
-	@TableField("is_enabled")
 	private Integer isEnabled;
 
-	@TableField("delete_flag")
+	private Enum gender;
+
+	@TableLogic
 	private Integer deleteFlag;
 
-	@TableField("create_time")
 	private Date createTime;
 
-	@TableField("update_time")
 	private Date updateTime;
 
-	@TableField("sort_time")
 	private Date sortTime;
+
+
+	@Override
+	protected Serializable pkVal() {
+		return pkId;
+	}
 }

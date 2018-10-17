@@ -1,10 +1,11 @@
 package top.yisen614.mybatisplusstart.entity;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.util.Date;
 import java.io.Serializable;
+
+import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -21,7 +22,7 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("t_article")
-public class Article implements Serializable {
+public class Article extends Model<Article> implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -32,5 +33,12 @@ public class Article implements Serializable {
 
     private Date pubDate;
 
-
+	/**
+	 *
+	 * @return
+	 */
+	@Override
+	protected Serializable pkVal() {
+		return pkId;
+	}
 }

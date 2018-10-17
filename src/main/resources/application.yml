@@ -5,11 +5,11 @@ spring:
     username: root
     password: sen515216
 
-
 mybatis-plus:
   config-location: classpath:mybatis/mybatis-config.xml
-#  mapper-locations: classpath:top/yisen614/mybatisplusstart/xml/*.xml
+  mapper-locations: classpath:top/yisen614/mybatisplusstart/xml/*.xml
   type-aliases-package: top.yisen614.mybatisplusstart.entity
+  type-enums-package: top.yisen614.mybatisplusstart.enums
   global-config:
     db-config:
       db-type: mysql

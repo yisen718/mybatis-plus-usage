@@ -2,12 +2,15 @@ package top.yisen614.mybatisplusstart;
 
 import com.baomidou.mybatisplus.core.injector.AbstractMethod;
 import com.baomidou.mybatisplus.core.injector.DefaultSqlInjector;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 import top.yisen614.mybatisplusstart.methods.DeleteAll;
 
 import java.util.List;
 
 @Component
+@Primary
 public class MySqlInjector extends DefaultSqlInjector {
 
     @Override
